@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Questions Board</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        .col-sm-3 {
+            width: 270px;
+            height: 270px;
+            text-align: center;
+            background-color: #8EB2D9;
+            margin: 5px 5px 5px 5px;
+            cursor: pointer;
+        }
+        h2 {
+            margin-top: 125px;
+        }
+        .question {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="jumbotron text-center">
+        <h1>Repaso de conceptos</h1>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <h2 class="number">1</h2>
+                <h2 class="question"></h2>
+            </div>
+            <div class="col-sm-3">
+                <h2 class="number">2</h2>
+                <h2 class="question"></h2>
+            </div>
+            <div class="col-sm-3">
+                <h2 class="number">3</h2>
+                <h2 class="question"></h2>
+            </div>
+            <div class="col-sm-3">
+                <h2 class="number">4</h2>
+                <h2 class="question"></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <h2 class="number">5</h2>
+                <h2 class="question">Proceso</h2>
+            </div>
+            <div class="col-sm-3">
+                <h2 class="number">6</h2>
+                <h2 class="question"></h2>
+            </div>
+            <div class="col-sm-3">
+                <h2 class="number">7</h2>
+                <h2 class="question">Gestion Ambiental</h2>
+            </div>
+            <div class="col-sm-3">
+                <h2 class="number">8</h2>
+                <h2 class="question"></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <h2 class="number">9</h2>
+                <h2 class="question"></h2>
+            </div>
+            <div class="col-sm-3">
+                <h2 class="number">10</h2>
+                <h2 class="question"></h2>
+            </div>
+            <div class="col-sm-3">
+                <h2 class="number">11</h2>
+                <h2 class="question">lider?</h2>
+            </div>
+            <div class="col-sm-3">
+                <h2 class="number">12</h2>
+                <h2 class="question">Proceso?</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-3">
+                <h2 class="number">13</h2>
+                <h2 class="question"></h2>
+            </div>
+            <div class="col-sm-3">
+                <h2 class="number">14</h2>
+                <h2 class="question">El Trabajo?</h2>
+            </div>
+            <div class="col-sm-3">
+                <h2 class="number">15</h2>
+                <h2 class="question"></h2>
+            </div>
+            <div class="col-sm-3">
+                <h2 class="number">16</h2>
+                <h2 class="question"></h2>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $(".col-sm-3").click(function(){
+                if($(this).find(".number").css("display") == "none"){
+                    $(this).find(".number").fadeIn(300);
+                    $(this).find(".question").fadeOut(300);
+                }else{
+                    $(this).find(".number").fadeOut(300);
+                    $(this).find(".question").fadeIn(300);
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
